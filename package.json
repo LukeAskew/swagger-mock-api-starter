@@ -4,6 +4,7 @@
   "description": "A mock API server using Swagger and Chance",
   "main": "index.js",
   "scripts": {
+    "prestart": "npm install",
     "start": "node index.js"
   },
   "keywords": [
