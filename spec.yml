@@ -1,0 +1,87 @@
+swagger: '2.0'
+info:
+  title: Restaurant Web API
+  version: "1.0.0"
+host: localhost
+schemes:
+  - https
+basePath: /api
+produces:
+  - application/json
+paths:
+  /locations:
+    get:
+      summary: Search for locations
+      description: |
+        The locations endpoint will search either by a search string or a 2 letter state code. It will
+        return a set of locations closest to the search string, or all locations in a state if state is specified
+      parameters:
+        - name: search
+          in: query
+          description: Search string to be geolocated.
+          required: false
+          type: string
+        - name: state
+          in: query
+          description: 2 letter state code
+          required: false
+          type: string
+      tags:
+        - Products
+      responses:
+        200:
+          description: An array of locations
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Location'
+
+definitions:
+  Location:
+    type: object
+    properties:
+      location_id:
+        type: string
+        description: Unique identifier for each store, assigned outside of this system
+        x-chance-type: guid
+      name:
+        type: string
+        description: Name of the location
+        x-chance-type: sentence
+        x-type-options:
+          words: 5
+      address1:
+        type: string
+        description: First line of the location's address
+        x-chance-type: address
+      address2:
+        type: string
+        description: Second line of the location's address
+        x-chance-type: string
+        x-type-options:
+            length: 3
+            pool: '1234567890'
+      address3:
+        type: string
+        description: Third line of the location's address
+      phone:
+        type: string
+        description: Phone number for the location
+        x-chance-type: phone
+      cross_street:
+        type: string
+        description: Cross street description of the location
+        x-chance-type: street
+      hours:
+        type: string
+        description: Text description of today's hours for the location
+        x-chance-type: sentence
+        x-type-options:
+            words: 7
+      wait_time:
+        type: integer
+        description: Number of minutes for the wait time
+        x-chance-type: natural
+        x-type-options:
+          min: 0
+          max: 60
