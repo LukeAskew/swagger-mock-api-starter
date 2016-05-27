@@ -1,7 +1,5 @@
 const path = require('path');
-const fs = require('fs');
 const express = require('express');
-const yaml = require('yaml-js');
 const mock = require('swagger-mock-api');
 
 const app = express();
