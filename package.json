@@ -13,14 +13,8 @@
   ],
   "author": "Luke Askew",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.13.4",
     "swagger-mock-api": "^1.5.2"
-  },
-  "dependencies": {
-    "swagger-docs": "0.0.0-alpha2",
-    "swagger-editor-server": "^1.0.0",
-    "swagger-express-middleware": "^1.0.0-alpha.12",
-    "yaml-js": "^0.1.3"
   }
 }
