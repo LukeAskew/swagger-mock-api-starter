@@ -1,6 +1,6 @@
 # Mock API Server
 
-A mock API using Swagger and Chance.
+A mock API using [Swagger](http://swagger.io/specification/) and [Chance](http://chancejs.com/).
 
 ## Usage
 
