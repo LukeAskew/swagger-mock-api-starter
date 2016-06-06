@@ -4,7 +4,13 @@ A mock API using [Swagger](http://swagger.io/specification/) and [Chance](http:/
 
 ## Usage
 
-To start the API server:
+Copy this repo:
+
+```
+curl -L https://github.com/lukeaskew/swagger-mock-api-starter/archive/master.tar.gz | tar zx --strip 1
+```
+
+Start the API server:
 
 ```
 npm start
