@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A mock API server using Swagger and Chance",
   "main": "index.js",
-  "config": {
-    "spec": "spec.yml"
-  },
   "scripts": {
     "prestart": "npm install",
     "start": "node index.js"
@@ -17,6 +14,7 @@
   ],
   "dependencies": {
     "express": "^4.13.4",
-    "swagger-mock-api": "^1.5.2"
+    "swagger-mock-api": "^1.5.2",
+    "yargs": "^4.7.1"
   }
 }

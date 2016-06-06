@@ -1,10 +1,10 @@
 const path = require('path');
+const argv = require('yargs').argv;
 const express = require('express');
 const mock = require('swagger-mock-api');
-const config = require('./package.json').config;
 
 const app = express();
-const specFile = path.join(__dirname, config.spec);
+const specFile = path.join(__dirname, argv._[0] || 'spec.yml');
 
 app.use(mock({
   swaggerFile: specFile,
